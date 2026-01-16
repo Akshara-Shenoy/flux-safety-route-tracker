@@ -1,0 +1,174 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    color: white;
+}
+
+/* =========================
+   LOGIN PAGE STYLES
+========================= */
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Glass container (Login) */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 320px;
+    margin: auto; /* Center fix */
+}
+
+/* Title */
+h2 {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Input fields (common for login + dashboard) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+/* Placeholder color */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button group (login) */
+.btn-group {
+    margin-top: 10px;
+}
+
+/* Buttons (common) */
+button {
+    padding: 10px 12px;
+    margin: 8px 2px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+/* Register button (login) */
+button:last-child {
+    background: rgba(33, 150, 243, 0.5);
+}
+
+/* Hover effect */
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   DASHBOARD STYLES
+========================= */
+
+.dashboard-page {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* Dashboard grid layout */
+.dashboard-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+/* Dashboard cards */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title */
+.card h3 {
+    margin-top: 0;
+}
+
+/* Logout button */
+.logout-btn {
+    background: rgba(255, 87, 87, 0.6);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 87, 87, 0.8);
+}
+
+/* =========================
+   SOS BUTTON (Dashboard)
+========================= */
+
+.sos {
+    background: rgba(255, 0, 0, 0.7);
+    width: 100%;
+}
+
+.sos:hover {
+    background: rgba(255, 0, 0, 0.9);
+}
+
+/* =========================
+   MAP STYLING
+========================= */
+
+#map {
+    height: 380px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

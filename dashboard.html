@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safety Route Tracker</title>
+
+  <!-- Main CSS (same file as login) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <style>
+    /* Only map-specific styling */
+    #map {
+      height: 380px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body class="dashboard-page">
+
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <h2>🛣️ Safety Route Tracker</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Dashboard Grid -->
+  <div class="dashboard-container">
+
+    <!-- Route Input Card -->
+    <div class="card">
+      <h3>Find Route</h3>
+      <input id="start" placeholder="Start location (eg: MG Road, Bengaluru)">
+      <input id="end" placeholder="Destination (eg: Majestic, Bengaluru)">
+      <button onclick="findSafestRoute()">Find Safest Route</button>
+    </div>
+
+    <!-- SOS Card -->
+    <div class="card">
+      <h3>Emergency</h3>
+      <button class="sos" onclick="sendSOS()">🚨 SOS (Current Location)</button>
+    </div>
+
+    <!-- Route Status -->
+    <div class="card" id="status">
+      <h3>Route Status</h3>
+      Route status will appear here
+    </div>
+
+    <!-- Safety Explanation -->
+    <div class="card" id="reason">
+      <h3>Safety Analysis</h3>
+      Safety explanation will appear here
+    </div>
+
+    <!-- Navigation Steps -->
+    <div class="card" id="navigation">
+      <h3>Navigation Steps</h3>
+      Navigation steps will appear here
+    </div>
+
+  </div>
+
+  <!-- Start Navigation -->
+  <div style="text-align:center; margin-top:15px;">
+    <button onclick="startNavigation()">▶ Start Navigation</button>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <script src="sos.js"></script>
+</body>
+</html>
